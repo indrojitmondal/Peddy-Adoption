@@ -52,49 +52,66 @@
     }
     </script>
 
-</head>
-<body class="font-lato">
-  <header class="w-11/12 mx-auto">
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <i class="fa-solid fa-bars text-primary" id="bar"></i>
+  </head>
+  <body class="font-lato">
+    <header class="w-11/12 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <i class="fa-solid fa-bars text-primary" id="bar"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="flex gap-2">
+          <img src="images/logo.webp" alt>
+          <a class="font-bold text-2xl">Peddy</a>
         </div>
-        <ul
-          tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li><a>Home</a></li>
-          <li><a>Shop</a></li>
-          
-          <li><a>Contact</a></li>
-        </ul>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-lg">Home</a></li>
+            <li><a class="text-lg">Shop</a></li>
+
+            <li><a class="text-lg">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <i class="fa-solid fa-user text-lg"></i>
+        </div>
       </div>
-       <img src="images/logo.webp" alt="">
-      <a class="btn btn-ghost text-xl">Peddy</a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li><a>Shop</a></li>
-        
-        <li><a>Contact</a></li>
-      </ul>
-    </div>
-    <div class="navbar-end">
-      <i class="fa-solid fa-user text-lg"></i>
-    </div>
-  </div>
-</header>
-    
-
-
+    </header>
 
     <main>
+
+      <!-- Banner  -->
+      <section class="mt-2 w-11/12 mx-auto text-center space-y-4">
+         <div class="space-y-1">
+          <span class="">Bringing Families Together</span> ❤️‍🔥
+          <h1 class="text-2xl font-bold">Your Path to Adoption <br> Starts Here</h1>
+          
+         </div>
+        <p class="md:w-1/2 md:mx-auto">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+         <a href="#mainContent" class="block"> <button class="px-3 py-2 bg-primary text-white rounded-md">View More</button>
+         </a>
+        <img src="images/pet.webp" class="mx-auto block" alt="">
+      </section>
+
+       <!-- Adapt your best friend -->
+       <section id="mainContent" class="w-11/12 mx-auto">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto iste nihil praesentium debitis quas vitae, eos veritatis eaque maxime nisi quasi nulla ipsam a reprehenderit porro doloremque. Aliquam vitae quas rem quae laudantium, consequatur ex eius, nobis sunt explicabo odio saepe ad at sint quidem iusto nemo libero accusantium sit mollitia quaerat, minima officiis? Repellendus harum aspernatur delectus sed quidem eveniet, voluptatibus, error et nihil ad accusamus quibusdam modi eligendi pariatur ducimus! Sed, eligendi. Unde quaerat soluta exercitationem, repellat voluptatibus laboriosam ipsa voluptate eius molestias nihil, a facilis, numquam itaque enim sunt quia doloremque ad vero magni! Sed sit sapiente cumque numquam molestias soluta in saepe quibusdam laborum, amet, nihil eaque ipsa impedit fugiat sequi quo animi, voluptatum neque inventore tenetur. Fugiat odit tempore alias aperiam dolorem incidunt amet suscipit nobis quibusdam laborum minima beatae ipsum tenetur nam ipsa neque totam optio illum quam impedit, qui voluptatem. Delectus sunt pariatur nisi aut numquam nesciunt quos harum laboriosam consequatur optio assumenda eius debitis itaque eum tempora, quasi non impedit ipsa at magnam? Doloremque magni perspiciatis quos provident nesciunt modi mollitia excepturi debitis maxime fugiat harum consectetur repellendus, ipsam, necessitatibus odit cupiditate quae? Eveniet aperiam distinctio explicabo nobis! Sint corrupti quos placeat.</p>
+        </section>
 
     </main>
     <footer>
 
     </footer>
-</body>
+  </body>
 </html>
