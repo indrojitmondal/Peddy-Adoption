@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peddy Adoption</title>
+    <!-- Google Font-Lato configuration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet">
+
     <!-- fontAwesome configuration -->
     <script src="https://kit.fontawesome.com/b5a83736f2.js"
       crossorigin="anonymous"></script>
@@ -18,7 +25,7 @@
           colors: {
             clifford: '#da373d',
             ck: '#da373d',
-            primary: '#B509AC',
+            primary: 'rgb(14, 122, 129)',
             nav:'#7A7A7A',
             header:'#FFFFFF',
             light: '#82828A',
@@ -36,15 +43,77 @@
                     'body': ['"Open Sans"',],
                     'manrope' : ['Manrope', 'sans-serif'],
                     'roboto' : ['Roboto', 'sans-serif'],
+                    'lato' : ['Lato', 'sans-serif'],
                    
                 },
 
         }
       }
     }
-    </script
+    </script>
+
 </head>
-<body>
-    <img src="images/logo.webp" alt="">
+<body class="font-lato">
+    <header class="w-11/12 mx-auto items-center flex justify-between py-5">
+      <div class="flex gap-2">
+        <img src="images/logo.webp" alt="logo">
+        <h3 class="text-2xl font-bold">Peddy</h3>
+      </div>
+      <nav class="hidden md:flex  gap-7 text-lg">
+            <a class="block" href="">Home</a>
+            <a class="block" href="">Shop</a>
+            <a class="block" href="">Contact</a>
+      </nav>
+      
+            <!-- Hamburger Menu for Mobile -->
+            <div class="ml-2 md:hidden">
+              <div class="btn btn-ghost border-1 lg:hidden lg:bg-primary text-lg">
+                  <i class="fa-solid fa-bars text-primary" id="bar"></i>
+                  <!-- <i class="fa-solid fa-x hidden" id="cross"> </i> -->
+              </div>
+            </div>
+      
+      <div>
+        <i class="fa-solid fa-user text-lg"></i>
+      </div>
+
+    </header>
+    
+     <!-- For mobile devices -->
+  <section class="w-10/12 mx-auto md:hidden">
+    <ul id="menuDropdown"
+            class=" hidden bg-white  z-[1]  text-center space-y-4 w-full p-2 shadow text-base lg:flex lg:flex-col gap-5">
+            <li
+              class="hover:text-primary transition-colors ease-in-out duration-300">
+              <a href="index.html">Home</a>
+            </li>
+            <li
+              class="text-primary  transition-colors ease-in-out duration-300">
+              <a href="projects.html">Shop</a>
+            </li>
+            <li
+              class="hover:text-primary transition-colors ease-in-out duration-300">
+              <a href="services.html">Contact</a>
+            </li>
+            <li
+            class="hover:text-primary transition-colors ease-in-out duration-300">
+            <a href="blogs.html">Blogs</a>
+            </li>
+            <li
+              class="hover:text-primary transition-colors ease-in-out duration-300">
+              <a href="contact.html">Contact</a>
+            </li>
+
+          </ul>
+
+  </section>
+
+
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
