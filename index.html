@@ -54,59 +54,40 @@
 
 </head>
 <body class="font-lato">
-    <header class="w-11/12 mx-auto items-center flex justify-between py-5">
-      <div class="flex gap-2">
-        <img src="images/logo.webp" alt="logo">
-        <h3 class="text-2xl font-bold">Peddy</h3>
+  <header class="w-11/12 mx-auto">
+  <div class="navbar bg-base-100">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <i class="fa-solid fa-bars text-primary" id="bar"></i>
+        </div>
+        <ul
+          tabindex="0"
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a>Home</a></li>
+          <li><a>Shop</a></li>
+          
+          <li><a>Contact</a></li>
+        </ul>
       </div>
-      <nav class="hidden md:flex  gap-7 text-lg">
-            <a class="block" href="">Home</a>
-            <a class="block" href="">Shop</a>
-            <a class="block" href="">Contact</a>
-      </nav>
-      
-            <!-- Hamburger Menu for Mobile -->
-            <div class="ml-2 md:hidden">
-              <div class="btn btn-ghost border-1 lg:hidden lg:bg-primary text-lg">
-                  <i class="fa-solid fa-bars text-primary" id="bar"></i>
-                  <!-- <i class="fa-solid fa-x hidden" id="cross"> </i> -->
-              </div>
-            </div>
-      
-      <div>
-        <i class="fa-solid fa-user text-lg"></i>
-      </div>
-
-    </header>
+       <img src="images/logo.webp" alt="">
+      <a class="btn btn-ghost text-xl">Peddy</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a>Home</a></li>
+        <li><a>Shop</a></li>
+        
+        <li><a>Contact</a></li>
+      </ul>
+    </div>
+    <div class="navbar-end">
+      <i class="fa-solid fa-user text-lg"></i>
+    </div>
+  </div>
+</header>
     
-     <!-- For mobile devices -->
-  <section class="w-10/12 mx-auto md:hidden">
-    <ul id="menuDropdown"
-            class=" hidden bg-white  z-[1]  text-center space-y-4 w-full p-2 shadow text-base lg:flex lg:flex-col gap-5">
-            <li
-              class="hover:text-primary transition-colors ease-in-out duration-300">
-              <a href="index.html">Home</a>
-            </li>
-            <li
-              class="text-primary  transition-colors ease-in-out duration-300">
-              <a href="projects.html">Shop</a>
-            </li>
-            <li
-              class="hover:text-primary transition-colors ease-in-out duration-300">
-              <a href="services.html">Contact</a>
-            </li>
-            <li
-            class="hover:text-primary transition-colors ease-in-out duration-300">
-            <a href="blogs.html">Blogs</a>
-            </li>
-            <li
-              class="hover:text-primary transition-colors ease-in-out duration-300">
-              <a href="contact.html">Contact</a>
-            </li>
 
-          </ul>
-
-  </section>
 
 
     <main>
