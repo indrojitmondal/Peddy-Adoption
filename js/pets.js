@@ -248,6 +248,20 @@ const loadPetsByCategoryName = async (categoryName)=>{
     console.log('loadPetsByCategoryName');
     console.log(data.data);
     const pets = data.data;
+    if(pets.length===0){
+        alert('Thik Ache');
+        return;
+        
+        const left= document.getElementById('left');
+        const right= document.getElementById('right');
+    
+        const rightContainer = document.getElementById('right-container');
+       
+        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+    
+        left.innerHTML='';
+        right.innerHTML='';
+    }
     console.log(pets);
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
@@ -290,6 +304,10 @@ const loadPetsByCategory = (x, categories) => {
 
     const rightContainer = document.getElementById('right-container');
    
+    rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+
+    left.innerHTML='';
+    right.innerHTML='';
 
     if(categoryStatus){
         // alert('Category Selected');
