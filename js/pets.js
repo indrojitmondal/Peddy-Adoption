@@ -249,7 +249,7 @@ const loadPetsByCategoryName = async (categoryName)=>{
     console.log(data.data);
     const pets = data.data;
     if(pets.length===0){
-        alert('Thik Ache');
+        // alert('Thik Ache');
         return;
         
         const left= document.getElementById('left');
