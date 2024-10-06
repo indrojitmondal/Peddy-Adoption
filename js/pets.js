@@ -29,9 +29,9 @@ const displayPets = (pets) => {
         <hr>
     
         <div class="pt-5 flex gap-5 justify-center">
-        <button class="px-5 py-1 btn  border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
-        <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
+        <button class="px-5 py-1   border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="px-5 py-1  border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
+        <button class="px-5 py-1  border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
         </div>
       `;
 
@@ -66,8 +66,9 @@ const displayPets = (pets) => {
             setTimeout(() => {
                 countdownModal.close(); // Close the modal
                 adoptButton.setAttribute('disabled',true);
-                 adoptButton.classList.add('text-black','bg-gray-100');
-                 adoptButton.classList.remove('hover:bg-btn');
+                //  adoptButton.classList.add('text-black','bg-gray-100');
+                //  adoptButton.classList.remove('hover:bg-btn');
+                 adoptButton.innerText='Adopted';
 
             }, 3000);
 
