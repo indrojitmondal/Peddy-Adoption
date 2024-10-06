@@ -1,2 +1,3 @@
- <img src="images/logo.webp" alt='logo'>
 
+ <img src="images/peddyAdoption.png" alt='screenshot'>
+## Peddy Adoption
