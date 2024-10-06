@@ -27,10 +27,11 @@ const displayPets = (pets) => {
         <p><i class="fa-solid fa-venus"></i> Gender: Female</p>
         <p><i class="fa-solid fa-dollar-sign"></i> Price : ${pet.price}$</p>
         <hr>
+    
         <div class="pt-5 flex gap-5 justify-center">
-         <button class="px-5 py-1 btn  border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
-         <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
-         <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
+        <button class="px-5 py-1 btn  border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
+        <button class="px-5 py-1 btn border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
         </div>
       `;
 
