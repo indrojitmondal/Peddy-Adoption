@@ -1,6 +1,6 @@
 
 
-## Project Name: Peddy Adoption 
+## Peddy Adoption 
 
 ![Screenshot](images/demo.gif)
 
