@@ -13,9 +13,9 @@ const displayPets = (pets) => {
 
     for (const pet of pets) {
         const newDiv = document.createElement('div');
-        newDiv.classList.add('border', 'p-3', 'border-b1');
+        newDiv.classList.add('border', 'p-3', 'border-b1','rounded-md');
         newDiv.innerHTML = `
-        <img src="${pet.image}" alt="">
+        <img class="rounded-md" src="${pet.image}" alt="">
         <h3 class="font-extrabold">${pet.pet_name}</h3>
         <p class="flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"> 
@@ -100,6 +100,7 @@ loadPets();
 const showImage = (imageSrc) => {
     const rightContainer = document.getElementById('right');
     const imgElement = document.createElement('img');
+    imgElement.classList.add('rounded-md');
     imgElement.setAttribute('src', imageSrc);
     rightContainer.append(imgElement);
 };
