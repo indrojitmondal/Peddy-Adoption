@@ -1,6 +1,6 @@
 
 
-## About The Project
+## Project Name: Peddy Adoption 
 
 ![Screenshot](images/demo.gif)
 
