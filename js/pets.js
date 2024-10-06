@@ -1,3 +1,4 @@
+// Load All Pets
 const loadPets = async () => {
 
     showSpinner(true);
@@ -6,8 +7,6 @@ const loadPets = async () => {
         showSpinner(false);
 
     },3000);
-
-
     const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await res.json();
     const pets = data.pets;
@@ -53,12 +52,11 @@ const showSpinner = (status)=>{
 
 const displayPets = (pets) => {
     const left = document.getElementById('left');
-     
-    
- 
-    
-
-    for (const pet of pets) {
+    const rightContainer = document.getElementById('right-container');
+    rightContainer.classList.add('border','border-gray-300', 'rounded-md');
+    console.log('hello');
+    console.log(rightContainer);
+   for (const pet of pets) {
         const newDiv = document.createElement('div');
         const year= getYear(pet.date_of_birth);
         const detailsLines= getPetDetailsLines(pet.pet_details);
@@ -183,10 +181,10 @@ const displayPets = (pets) => {
 };
 
 
-// Call the function to start the countdown
-
 
 loadPets();
+
+
 
 const showImage = (imageSrc) => {
     const rightContainer = document.getElementById('right');
@@ -234,11 +232,107 @@ const resetAllCategories = (categories) => {
         x.classList.remove('bg-btn', 'rounded-[120px]');
     });
 }
+let categoryStatus=false;
+let categoryName='';
+// loadPetsByCategoryName 
+const loadPetsByCategoryName = async (categoryName)=>{
+    showSpinner(true);
+    setTimeout( ()=>{
 
+        showSpinner(false);
+
+    },3000);
+   
+    const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryName}`)
+    const data = await res.json();
+    console.log('loadPetsByCategoryName');
+    console.log(data.data);
+    const pets = data.data;
+    console.log(pets);
+    // setTimeout(displayPets(pets),5000);
+    setTimeout( () =>{
+        displayPets(pets);
+    }, 3000);
+    // displayPets(pets);
+    for (const pet of pets) {
+        console.log(pet);
+    }
+    
+    
+    
+}
 const loadPetsByCategory = (x, categories) => {
     resetAllCategories(categories);
     const currentButton = document.getElementById(x);
     currentButton.classList.add('bg-btn', 'rounded-[120px]');
 
     // alert(x); // gets the category ID
+    categoryStatus=true;
+    if(x===1)
+    {
+        categoryName='cat';
+       // alert(categoryName);
+    }
+    else if(x===2){
+        categoryName='dog';
+       // alert(categoryName);
+    }
+    else if(x===3){
+        categoryName='rabbit';
+        //alert(categoryName);
+    }
+    else if(x===4){
+        categoryName='bird';
+        //alert(categoryName);
+    }
+    const left= document.getElementById('left');
+    const right= document.getElementById('right');
+
+    const rightContainer = document.getElementById('right-container');
+   
+
+    if(categoryStatus){
+        // alert('Category Selected');
+        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+
+        left.innerHTML='';
+        right.innerHTML='';
+        
+        // alert(categoryName);
+    }
+    else{
+        // alert('all data is in display');
+    }
+     
+    
+    
+    loadPetsByCategoryName(categoryName);
 }
+
+
+
+const shortByPrice= document.getElementById('shortByPrice');
+shortByPrice.addEventListener('click', ()=>{
+    const left= document.getElementById('left');
+    const right= document.getElementById('right');
+
+    const rightContainer = document.getElementById('right-container');
+   
+
+    if(categoryStatus){
+        // alert('Category Selected');
+        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+
+        left.innerHTML='';
+        right.innerHTML='';
+        
+        // alert(categoryName);
+    }
+    else{
+        // alert('all data is in display');
+    }
+     
+    
+    
+    // alert('Short button Clicked');
+})
