@@ -1,3 +1,3 @@
- Peddy Adoption
- <img src="images/peddyAdoption.png" alt='screenshot'>
 
+ <img src="images/peddyAdoption.png" alt='screenshot'>
+## Peddy Adoption
