@@ -59,7 +59,8 @@ const displayPets = (pets) => {
     if(pets.length===0){
         const left= document.getElementById('left');
         
-        left.classList.remove('grid-cols-3');
+        left.classList.remove('lg:grid-cols-3','md:grid-cols-2');
+        
         left.classList.add('grid-cols-1');
         left.innerHTML='';
         left.innerHTML=
@@ -82,7 +83,7 @@ const displayPets = (pets) => {
     else{
         const left= document.getElementById('left');
         left.classList.remove('grid-cols-1');
-        left.classList.add('grid-cols-3');
+        left.classList.add('lg:grid-cols-3','md:grid-cols-2','grid-cols-1');
        
         left.innerHTML='';
        
@@ -107,10 +108,10 @@ const displayPets = (pets) => {
         
         <hr>
     
-        <div class="pt-5 flex gap-5 justify-center">
-        <button class="px-5 py-1   border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="px-5 py-1  border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
-        <button class="px-5 py-1  border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
+        <div class="pt-5 flex gap-3 lg:gap-5 justify-center">
+        <button class="lg:px-5 px-2 py-1   border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="lg:px-5 px-2 py-1  border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
+        <button class="lg:px-5 px-2 py-1  border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
         </div>
       `;
 
