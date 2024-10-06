@@ -56,6 +56,36 @@ const displayPets = (pets) => {
     rightContainer.classList.add('border','border-gray-300', 'rounded-md');
     console.log('hello');
     console.log(rightContainer);
+    if(pets.length===0){
+        const left= document.getElementById('left');
+        
+        left.classList.remove('grid-cols-3');
+        left.classList.add('grid-cols-1');
+        left.innerHTML='';
+        left.innerHTML=
+        `
+        
+
+        
+        <div class="border mx-auto p-3 border-b1">
+
+        <img class="mx-auto" src="images/error.webp" alt="notFound">
+        <h1 class="font-bold text-center text-xl">No Information Available</h1>
+        <p class="w-8/12 mx-auto ">It is a long established fact that a reader will be distracted by the readable content of a page when looking at 
+         its layout. The point of using Lorem Ipsum is that it has a.</p>
+
+     </div>
+
+        `;
+        return;
+    }
+    else{
+        const left= document.getElementById('left');
+        left.classList.remove('grid-cols-1');
+        left.classList.add('grid-cols-3');
+       
+        left.innerHTML='';
+       
    for (const pet of pets) {
         const newDiv = document.createElement('div');
         const year= getYear(pet.date_of_birth);
@@ -178,6 +208,7 @@ const displayPets = (pets) => {
 
 
     }
+   }
 };
 
 
@@ -248,20 +279,7 @@ const loadPetsByCategoryName = async (categoryName)=>{
     console.log('loadPetsByCategoryName');
     console.log(data.data);
     const pets = data.data;
-    if(pets.length===0){
-        // alert('Thik Ache');
-        return;
-        
-        const left= document.getElementById('left');
-        const right= document.getElementById('right');
-    
-        const rightContainer = document.getElementById('right-container');
-       
-        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
-    
-        left.innerHTML='';
-        right.innerHTML='';
-    }
+  
     console.log(pets);
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
@@ -304,17 +322,17 @@ const loadPetsByCategory = (x, categories) => {
 
     const rightContainer = document.getElementById('right-container');
    
-    rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+    // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
     left.innerHTML='';
-    right.innerHTML='';
+    // right.innerHTML='';
 
     if(categoryStatus){
         // alert('Category Selected');
-        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+        // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
         left.innerHTML='';
-        right.innerHTML='';
+        // right.innerHTML='';
         
         // alert(categoryName);
     }
@@ -339,10 +357,10 @@ shortByPrice.addEventListener('click', ()=>{
 
     if(categoryStatus){
         // alert('Category Selected');
-        rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
+        // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
         left.innerHTML='';
-        right.innerHTML='';
+        // right.innerHTML='';
         
         // alert(categoryName);
     }
