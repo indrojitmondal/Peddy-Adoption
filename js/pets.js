@@ -40,7 +40,7 @@ const displayPets = (pets) => {
         Breed: ${pet.breed?pet.breed:'Golden Retrieve'}
         </p>
        
-        <p><i class="fa-solid fa-cake-candles"></i> Birth: ${pet.date_of_birth?year:'2024'}</p>
+        <p><i class="fa-solid fa-calendar-days "></i> Birth: ${pet.date_of_birth?year:'2024'}</p>
         <p><i class="fa-solid fa-venus"></i> Gender: ${pet.gender?pet.gender:'Male'}</p>
         <p><i class="fa-solid fa-dollar-sign"></i> Price : ${pet.price?pet.price:'1200'}$</p>
         <hr>
