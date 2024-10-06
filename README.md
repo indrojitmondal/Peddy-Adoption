@@ -3,6 +3,40 @@
 ## Peddy Adoption 
 
 <img src="./images/logo.webp" alt="Logo" width="80" height="80">
+<header class="w-11/12 mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <i class="fa-solid fa-bars text-primary" id="bar"></i>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+              <li><a>Home</a></li>
+              <li><a>Shop</a></li>
+
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <div class="flex gap-2">
+            <img src="images/logo.webp" alt>
+            <a class="font-bold text-3xl">Peddy</a>
+          </div>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a class="text-lg">Home</a></li>
+            <li><a class="text-lg">Shop</a></li>
+
+            <li><a class="text-lg">Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <i class="fa-solid fa-user text-lg"></i>
+        </div>
+      </div>
+    </header>
 
 Peddy Adoption is a user-friendly web application designed to connect potential pet adopters with pets in need of a loving home. Built with a focus on simplicity and ease of use, this platform allows users to browse through available pets and learn about their unique characteristics. Users can initiate the adoption process through a seamless interaction with an 'Adopt' button that opens a modal for more details. The project is developed using modern technologies like Tailwind CSS and DaisyUI for an elegant and responsive design, ensuring an enjoyable user experience across devices.
 
