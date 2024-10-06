@@ -4,19 +4,7 @@
 
 ![Screenshot](images/demo.gif)
 
-One of the challenges with building and contributing to open source software is that while many projects have amazing functionalities, they often miss out on reaching a wider audience due to lack of clear and user-friendly installation instructions. In addition, lack of efficient showcase of their use cases also contribute to the lower reach of these projects.
-
-While there are ReadME templates that can help address this, the process of manually filling out these templates can be time-consuming and tedious. That&#39;s where our project makeread.me comes in.
-
-Introducing makeread.me, an automated ReadMe Generator that can revolutionize how you create your project documentation. It is designed to:
-
-- Save your valuable time enhancing your focus on development,
-- Automate redundant tasks, and,
-- Implement DRY (Don&#39;t Repeat Yourself) principles to your documentation.
-
-It&#39;s free, open-source, and highly customizable. Feel free to modify our templates to fit your needs. If you find that a particular component is missing, you are more than welcome to contribute and expand the project.
-
-We&#39;ve made it easy for you to contribute to the project by using Nunjucks and JSON templates for programmatic mapping. Enjoy the benefits of clear and concise project documentation with makeread.me!
+Peddy Adoption is a user-friendly web application designed to connect potential pet adopters with pets in need of a loving home. Built with a focus on simplicity and ease of use, this platform allows users to browse through available pets and learn about their unique characteristics. Users can initiate the adoption process through a seamless interaction with an 'Adopt' button that opens a modal for more details. The project is developed using modern technologies like Tailwind CSS and DaisyUI for an elegant and responsive design, ensuring an enjoyable user experience across devices.
 
 ### Built With
 
