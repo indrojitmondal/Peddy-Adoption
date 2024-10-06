@@ -1,9 +1,22 @@
 const loadPets = async () => {
+
+    showSpinner(true);
+    setTimeout( ()=>{
+
+        showSpinner(false);
+
+    },3000);
+
+
     const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await res.json();
     const pets = data.pets;
     console.log(pets);
-    displayPets(pets);
+    // setTimeout(displayPets(pets),5000);
+    setTimeout( () =>{
+        displayPets(pets);
+    }, 3000);
+    // displayPets(pets);
     for (const pet of pets) {
         console.log(pet);
     }
@@ -26,9 +39,24 @@ const getPetDetailsLines= (pet_details) =>{
    console.log(result);
    return result;
 }
+const showSpinner = (status)=>{
+    const spinner = document.getElementById('spinner');
+    if(status){
+        spinner.classList.remove('hidden');
+    }
+    else{
+        spinner.classList.add('hidden');
+    }
+
+}
+// setTimeout(displayPets,2000);
 
 const displayPets = (pets) => {
     const left = document.getElementById('left');
+     
+    
+ 
+    
 
     for (const pet of pets) {
         const newDiv = document.createElement('div');

@@ -56,6 +56,8 @@
     }
     </script>
 
+   
+
   </head>
   <body class="font-lato">
     <header class="w-11/12 mx-auto">
@@ -145,6 +147,22 @@
           by Price</button>
 
       </section>
+
+      <!-- spinner -->
+      <section id="spinner" class="hidden py-5 w-11/12 mx-auto ">
+         <div class="flex justify-center">
+
+          <span class="loading loading-bars loading-xs"></span>
+          <span class="loading loading-bars loading-sm"></span>
+          <span class="loading loading-bars loading-md"></span>
+          <span class="loading loading-bars loading-lg"></span>
+
+         </div>
+          
+          
+      </section>
+      
+     
       <section class="w-11/12 mt-6 mx-auto grid grid-cols-12 gap-3 ">
         <div id="left" class="col-span-9 grid grid-cols-3   gap-4">
 
@@ -179,7 +197,7 @@
 
         </div>
         <!-- Right side -->
-        <div  class="col-span-3 p-3 border border-gray-300 rounded-md">
+        <div class="col-span-3 p-3 border border-gray-300 rounded-md">
           <div id="right" class="grid grid-cols-2 gap-3">
 
             <!-- <img src="https://i.ibb.co.com/p0w744T/pet-1.jpg" alt>
@@ -192,29 +210,29 @@
           </div>
         </div>
 
-       
-         <!-- countdownModal-->
+        <!-- countdownModal-->
         <dialog id="countdownModal" class="modal modal-middle">
           <div class="modal-box w-96">
-              
-               <img class="mx-auto" src="images/icons8-handshake-48.png" alt="">
-              
-              <h2 class="text-3xl font-extrabold text-center">Congrates</h3>
 
-              <div class="text-center ">
-                  
-                  <p class="py-2 font-bold">Adoption Process is Start For your pet</p>
-                  <h1 id="countdown" class="text-3xl font-extrabold pt-3 pb-3">3</h1>
-                  
-                  <!-- <form method="dialog">
+            <img class="mx-auto" src="images/icons8-handshake-48.png" alt>
+
+            <h2 class="text-3xl font-extrabold text-center">Congrates</h3>
+
+            <div class="text-center ">
+
+              <p class="py-2 font-bold">Adoption Process is Start For your
+                pet</p>
+              <h1 id="countdown"
+                class="text-3xl font-extrabold pt-3 pb-3">3</h1>
+
+              <!-- <form method="dialog">
                   
                     <button class="btn text-center">close
                         confirmation</button>
 
                  </form> -->
 
-                 
-              </div>
+            </div>
 
           </div>
         </dialog>
@@ -266,21 +284,13 @@
           </div> -->
         </dialog>
 
-      
-
       </section>
-
-
-
-      
-      
 
     </main>
     <footer>
 
     </footer>
     <script src="js/pets.js"></script>
-   
 
   </body>
 </html>
