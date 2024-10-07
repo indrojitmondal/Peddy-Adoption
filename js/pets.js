@@ -1,4 +1,8 @@
 // Load All Pets
+let copyPets= (x)=>{
+   
+    displayPetsByShorting(x);
+}
 const loadPets = async () => {
 
     showSpinner(true);
@@ -10,7 +14,9 @@ const loadPets = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await res.json();
     const pets = data.pets;
-    console.log(pets);
+     copyPets([...pets]);
+    // shortByPrice(copyPets);
+    //console.log(pets);
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
         displayPets(pets);
@@ -231,7 +237,10 @@ const loadCategories = async () => {
     const res = await fetch('https://openapi.programming-hero.com/api/peddy/categories');
     const data = await res.json();
     // console.log(data.categories);
-    displayCategories(data.categories);
+    const finalData= data.categories;
+    // copyPets([...finalData]);
+    displayCategories(finalData);
+
 
 
 }
@@ -278,10 +287,11 @@ const loadPetsByCategoryName = async (categoryName)=>{
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryName}`)
     const data = await res.json();
     console.log('loadPetsByCategoryName');
-    console.log(data.data);
+    // console.log(data.data);
     const pets = data.data;
-  
-    console.log(pets);
+
+    copyPets([...pets]);
+    // console.log(pets);
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
         displayPets(pets);
@@ -300,6 +310,7 @@ const loadPetsByCategory = (x, categories) => {
     currentButton.classList.add('bg-btn', 'rounded-[120px]');
 
     // alert(x); // gets the category ID
+    // displayPetsByShorting();
     categoryStatus=true;
     if(x===1)
     {
@@ -345,12 +356,31 @@ const loadPetsByCategory = (x, categories) => {
     
     loadPetsByCategoryName(categoryName);
 }
-
+let myData=[];
+const displayPetsByShorting = (x) =>{
+//    function copyPets(x){
+//        console.log('CopyData');
+//        console.log(x);
+//    }
+    console.log('CopyDataGot:');
+    console.log(x);
+    myData=x;
+    
+    
+    
+}
 
 
 const shortByPrice= document.getElementById('shortByPrice');
 shortByPrice.addEventListener('click', ()=>{
-    const left= document.getElementById('left');
+    alert('shortButtonClicked');
+    console.log('Data Received by myData');
+    console.log(myData);
+
+
+ 
+    // displayPetsByShorting();
+    const left = document.getElementById('left');
     const right= document.getElementById('right');
 
     const rightContainer = document.getElementById('right-container');
