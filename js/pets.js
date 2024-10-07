@@ -267,6 +267,9 @@ const displayCategories = (categories) => {
 }
 
 const resetAllCategories = (categories) => {
+    const shortByPrice= document.getElementById('shortByPrice');
+    shortByPrice.classList.remove('bg-primary');
+    shortByPrice.classList.add('hover:bg-btnShort');
     console.log(categories.length);
     categories.forEach(category => {
         const id = category.id;
@@ -384,6 +387,8 @@ shortByPrice.addEventListener('click', ()=>{
     // alert('shortButtonClicked');
     console.log('Copy Data Received by myData');
     console.log(myData);
+    shortByPrice.classList.add('bg-primary');
+    shortByPrice.classList.remove('hover:bg-btnShort');
 
 
  
