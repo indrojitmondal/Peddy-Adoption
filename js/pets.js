@@ -345,6 +345,7 @@ const loadPetsByCategory = (x, categories) => {
         // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
         left.innerHTML='';
+        
         // right.innerHTML='';
         
         // alert(categoryName);
@@ -376,7 +377,7 @@ const getCopyData = (x) =>{
 const shortByPrice= document.getElementById('shortByPrice');
 shortByPrice.addEventListener('click', ()=>{
     alert('shortButtonClicked');
-    console.log('Data Received by myData');
+    console.log('Copy Data Received by myData');
     console.log(myData);
 
 
@@ -393,6 +394,7 @@ shortByPrice.addEventListener('click', ()=>{
         // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
         left.innerHTML='';
+        displayPets(myData);
         // right.innerHTML='';
         
         // alert(categoryName);
