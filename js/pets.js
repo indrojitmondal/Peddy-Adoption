@@ -94,7 +94,7 @@ const displayPets = (pets) => {
        
         left.innerHTML='';
        
-   for (const pet of pets) {
+        for (const pet of pets) {
         const newDiv = document.createElement('div');
         const year= getYear(pet.date_of_birth);
         const detailsLines= getPetDetailsLines(pet.pet_details);
@@ -162,17 +162,24 @@ const displayPets = (pets) => {
         }
 
         const detailsButton = newDiv.querySelector('.details');
-        detailsButton.onclick = () =>{
+        detailsButton.onclick = async() =>{
             const detailsModal = document.getElementById('detailsModal');
+           // alert(pet.petId);
+            let petId= pet.petId;
+            const res= await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
+            const data = await res.json();
+            console.log('Details Data');
+            console.log(data.petData);
+            let p=data.petData;
             const detailsListHTML = detailsLines.map(line => `<li>${line}.</li>`).join(''); 
             detailsModal.innerHTML=
             `
             <div class="modal-box space-y-2 rounded-md">
                
-            <img class="w-full rounded-md" src="${pet.image}" alt="">
+            <img class="w-full rounded-md" src="${p.image}" alt="">
 
             
-              <h2 class="text-2xl font-bold ">${pet.pet_name?pet.pet_name:'Tom'}</h3>
+              <h2 class="text-2xl font-bold ">${p.pet_name?p.pet_name:'Tom'}</h3>
             <div class="space-y-2">
               <div>
                 <div class="grid grid-cols-2 gap-5">
@@ -180,20 +187,20 @@ const displayPets = (pets) => {
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"> 
                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                 </svg> 
-                Breed: ${pet.breed?pet.breed:'Golden Retrieve'}
+                Breed: ${p.breed?p.breed:'Golden Retrieve'}
                 </p> 
-                <p><i class="fa-solid fa-calendar-days "></i> Birth: ${pet.date_of_birth?year:'2024'}</p>
+                <p><i class="fa-solid fa-calendar-days "></i> Birth: ${p.date_of_birth?year:'2024'}</p>
                 </div>
                 <div class="grid grid-cols-2 gap-5">
-                <p><i class="fa-solid fa-venus"></i> Gender:  ${pet.gender?pet.gender:'Male'}</p>
-                <p><i class="fa-solid fa-dollar-sign"></i> Price : ${pet.price?pet.price:'1200'}$</p>
+                <p><i class="fa-solid fa-venus"></i> Gender:  ${p.gender?p.gender:'Male'}</p>
+                <p><i class="fa-solid fa-dollar-sign"></i> Price : ${p.price?p.price:'1200'}$</p>
                 </div> 
-                <p><i class="fa-solid fa-venus"></i> Vaccinated Status : ${pet.vaccinated_status?pet.vaccinated_status:'Partially'}</p>
+                <p><i class="fa-solid fa-venus"></i> Vaccinated Status : ${p.vaccinated_status?p.vaccinated_status:'Partially'}</p>
               </div> 
                
               <div>
                  <h3 class="font-extrabold ">Details Information</h3>
-                 <p>${pet.pet_details}</p>
+                 <p>${p.pet_details}</p>
               </div>
 
             </div>
