@@ -373,10 +373,15 @@ const getCopyData = (x) =>{
     
 }
 
+function compare(a,b){
+    if(!a.price) a.price=1200;
+    if(!b.price) b.price=1200;
+    return (b.price)-(a.price);
+ }
 
 const shortByPrice= document.getElementById('shortByPrice');
 shortByPrice.addEventListener('click', ()=>{
-    alert('shortButtonClicked');
+    // alert('shortButtonClicked');
     console.log('Copy Data Received by myData');
     console.log(myData);
 
@@ -387,13 +392,16 @@ shortByPrice.addEventListener('click', ()=>{
     const right= document.getElementById('right');
 
     const rightContainer = document.getElementById('right-container');
-   
+    left.innerHTML='';
+        myData.sort(compare);
+        displayPets(myData);
 
     if(categoryStatus){
         // alert('Category Selected');
         // rightContainer.classList.remove('border','border-gray-300', 'rounded-md');
 
         left.innerHTML='';
+        myData.sort(compare);
         displayPets(myData);
         // right.innerHTML='';
         
