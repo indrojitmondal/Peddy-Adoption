@@ -11,7 +11,7 @@ const loadPets = async () => {
 
         showSpinner(false);
 
-    },3000);
+    },2000);
     const res = await fetch('https://openapi.programming-hero.com/api/peddy/pets');
     const data = await res.json();
     const pets = data.pets;
@@ -21,7 +21,7 @@ const loadPets = async () => {
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
         displayPets(pets);
-    }, 3000);
+    }, 2000);
     // displayPets(pets);
     for (const pet of pets) {
         console.log(pet);
@@ -193,13 +193,7 @@ const displayPets = (pets) => {
                
               <div>
                  <h3 class="font-extrabold ">Details Information</h3>
-                 <p>Meet our lovable pet! Full of energy and affection, this furry friend brightens every day. Check out the details below to learn more about their unique traits!</p>
-                  <ul class="pl-10 list-disc">
-                     
-                  ${detailsListHTML}
-                     
-                  
-                  </ul>
+                 <p>${pet.pet_details}</p>
               </div>
 
             </div>
@@ -249,7 +243,8 @@ const loadCategories = async () => {
 loadCategories();
 const displayCategories = (categories) => {
     const categoryContainer = document.getElementById('category-container');
-
+    
+    let s=1;
     for (const pet of categories) {
         const newButton = document.createElement('button');
         newButton.classList = 'hover:bg-btn border py-5 border-btn rounded-2xl flex gap-3 items-center justify-center';
@@ -264,7 +259,15 @@ const displayCategories = (categories) => {
            <h3 class="text-lg md:text-xl font-bold">${pet.category}</h3>
        `;
         categoryContainer.append(newButton);
+        if(pet.id===2){
+            // alert('hi');
+            document.getElementById('2').classList.add('bg-btn','rounded-[120px]');  
+        }
+        s++;
     }
+    
+   
+
 }
 
 const resetAllCategories = (categories) => {
@@ -287,7 +290,7 @@ const loadPetsByCategoryName = async (categoryName)=>{
 
         showSpinner(false);
 
-    },3000);
+    },2000);
    
     const res = await fetch(`https://openapi.programming-hero.com/api/peddy/category/${categoryName}`)
     const data = await res.json();
@@ -300,7 +303,7 @@ const loadPetsByCategoryName = async (categoryName)=>{
     // setTimeout(displayPets(pets),5000);
     setTimeout( () =>{
         displayPets(pets);
-    }, 3000);
+    }, 2000);
     // displayPets(pets);
     for (const pet of pets) {
         console.log(pet);
@@ -324,6 +327,7 @@ const loadPetsByCategory = (x, categories) => {
     }
     else if(x===2){
         categoryName='dog';
+       
        // alert(categoryName);
     }
     else if(x===3){
@@ -421,3 +425,7 @@ shortByPrice.addEventListener('click', ()=>{
     
     // alert('Short button Clicked');
 })
+
+// document.getElementById('2').classList.add('bg-btn', 'rounded-[120px]');
+
+console.log(document.getElementById('2'));
