@@ -93,7 +93,7 @@ const displayPets = (pets) => {
         const detailsLines= getPetDetailsLines(pet.pet_details);
         newDiv.classList.add('border', 'p-3', 'border-b1','rounded-md');
         newDiv.innerHTML = `
-        <img class="rounded-md" src="${pet.image}" alt="">
+        <img class="rounded-md  " src="${pet.image}" alt="">
         <h3 class="font-extrabold">${pet.pet_name?pet.pet_name:'Tom'}</h3>
         <p class="flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"> 
@@ -104,14 +104,14 @@ const displayPets = (pets) => {
        
         <p><i class="fa-solid fa-calendar-days "></i> Birth: ${pet.date_of_birth?year:'2024'}</p>
         <p><i class="fa-solid fa-venus"></i> Gender: ${pet.gender?pet.gender:'Male'}</p>
-        <p><i class="fa-solid fa-dollar-sign"></i> Price : ${pet.price?pet.price:'1200'}$</p>
+        <p class="pb-2"><i class="fa-solid fa-dollar-sign"></i> Price : ${pet.price?pet.price:'1200'}$</p>
         
         <hr>
     
-        <div class="pt-5 flex gap-3 lg:gap-5 justify-center">
-        <button class="lg:px-5 px-2 py-1   border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
-        <button class="lg:px-5 px-2 py-1  border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
-        <button class="lg:px-5 px-2 py-1  border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
+        <div class="pt-5 flex gap-5 justify-center md:justify-start ">
+        <button class="px-5 md:px-2  py-1   border border-btn rounded-md hover:bg-btn like-button text-primary"><i class="fa-regular fa-thumbs-up"></i></button>
+        <button class="px-5 md:px-2  py-1  border border-btn rounded-md hover:bg-btn adopt text-primary">Adopt</button>
+        <button class="px-5 md:px-2  py-1  border border-btn rounded-md hover:bg-btn details text-primary">Details</button>
         </div>
       `;
 
@@ -250,7 +250,7 @@ const displayCategories = (categories) => {
         newButton.setAttribute('id', `${pet.id}`);
         newButton.innerHTML = `
            <img src="${pet.category_icon}" alt="${pet.category}">
-           <h3 class="text-xl font-bold">${pet.category}</h3>
+           <h3 class="text-lg md:text-xl font-bold">${pet.category}</h3>
        `;
         categoryContainer.append(newButton);
     }
