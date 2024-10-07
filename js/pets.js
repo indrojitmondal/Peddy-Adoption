@@ -1,7 +1,8 @@
 // Load All Pets
 let copyPets= (x)=>{
    
-    displayPetsByShorting(x);
+    // displayPetsByShorting(x);
+    getCopyData(x);
 }
 const loadPets = async () => {
 
@@ -357,7 +358,8 @@ const loadPetsByCategory = (x, categories) => {
     loadPetsByCategoryName(categoryName);
 }
 let myData=[];
-const displayPetsByShorting = (x) =>{
+
+const getCopyData = (x) =>{
 //    function copyPets(x){
 //        console.log('CopyData');
 //        console.log(x);
