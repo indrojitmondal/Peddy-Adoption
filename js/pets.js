@@ -160,7 +160,7 @@ const displayPets = (pets) => {
             }, 3000);
 
         }
-        
+
         const detailsButton = newDiv.querySelector('.details');
         detailsButton.onclick = () =>{
             const detailsModal = document.getElementById('detailsModal');
@@ -381,6 +381,9 @@ const compare=(a,b)=>{
     if(!a.price) a.price=1200;
     if(!b.price) b.price=1200;
     return (b.price)-(a.price);
+ }
+ const mapping = (data)=>{
+    
  }
 
 const shortByPrice= document.getElementById('shortByPrice');
