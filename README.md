@@ -7,7 +7,7 @@ Peddy Adoption is a web app that helps users find pets that are available for ad
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
-- [ES6 features](#es6features)
+- [ES6features](#es6features)
 - [Screenshots](#screenshots)
 - [Livelink](#livelink)
 
