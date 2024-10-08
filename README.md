@@ -7,7 +7,7 @@ Peddy Adoption is a web app that helps users find pets that are available for ad
 ## Table of Contents
 - [Description](#description)
 - [Features](#features)
-- [ES6 features used](#es6features)
+- [ES6 features used](#es6featuresused)
 - [Screenshots](#screenshots)
 - [Livelink](#livelink)
 
@@ -31,7 +31,7 @@ Here are the top 5 key features of Peddy Adoption:
 5. **Footer with Subscription and Contact**:
    - The footer includes a subscription input field for users to receive updates and a contact button, enhancing user engagement and communication.
 
-## ES^ Features Used
+## ES6 Features Used
 Here are the top 5 methods of ES6 that's are used in my project:
 1. **Let, Const**:
    - I have used let variables locally and globally, and const variables for array and object declaration.
