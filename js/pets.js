@@ -137,7 +137,7 @@ const displayPets = (pets) => {
             const countdownElement = document.getElementById('countdown');
             console.log(modalValue);
 
-            let count = 3;
+            let count = 2;
             const intervalId = setInterval(() => {
                 countdownElement.innerText = count; // Update the countdown display
 
@@ -157,7 +157,7 @@ const displayPets = (pets) => {
                 //  adoptButton.classList.remove('hover:bg-btn');
                  adoptButton.innerText='Adopted';
 
-            }, 3000);
+            }, 2000);
 
         }
 
