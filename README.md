@@ -1,6 +1,5 @@
-# Peddy Adoption 🐾
-
-Peddy Adoption is a web application that helps users find pets that are available for adoption. It allows users to view pet profiles, filter by category, and initiate the adoption process, all within a clean and responsive interface.
+# Peddy Adoption
+Peddy Adoption is a web application that can be helpful for any pet lovers. With this web app, anyone can find their desired pet. The Peddy includes Cat, Dog, Rabbit, and Bird Categories. The pet lovers can also find pets sorted by price. 
 
 ![Peddy Adoption Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/peddyAdoption.png)
 
@@ -12,24 +11,23 @@ Peddy Adoption is a web application that helps users find pets that are availabl
 - [Livelink](#livelink)
 
 ## Description
-Peddy Adoption is designed to streamline the pet adoption process by allowing users to browse available pets, view detailed information about them, and express their interest in adoption easily through an "Adopt" button and modal. When the pet lovers click the like button, a pet will be stored in the adoption box.
 
 ## Features
 Here are the top 5 key features of Peddy Adoption:
-1. **Pet Listings with Detailed Information**:
-   - Each pet profile displays a clear image, name, age, breed, and a brief description, helping users find pets available for adoption.
+1. **Pet Profile and Detailed Information**:
+   - Each profile displays a clear image, name, breed, birth date, gender, price, vaccination status, and detailed information about a specific pet that helps users find pets available for adoption.
    
-2. **Adopt Button and Modal**:
-   - Each pet card includes an "Adopt" button, triggering a modal for users to express interest in adopting the specific pet, making the adoption process user-friendly.
-
+2. **Like and Adopt Button**:
+   - Each pet card includes a Like, Adopt, and Details button. The like button is for users to express interest and the adopt button shows a congratulatory message for adoption express.
+     
 3. **Clean and Responsive Design**:
-   - The website is built using Tailwind CSS and DaisyUI, ensuring a modern, clean, and responsive layout that adjusts smoothly to different screen sizes.
+   - The website is fully built using Tailwind CSS, and DaisyUI and ensures a modern, clean, and responsive layout that adjusts smoothly in different screen sizes like desktops, tablets, or mobiles.
 
-4. **Category-based Filtering**:
-   - Users can filter pet listings based on categories, allowing them to quickly find specific types of pets they are interested in adopting.
+4. **Category and Price-based Filtering**:
+   - There are 4 categories Cat, Dog, Rabbit, and Bird. Users can filter by Prices. The sort-by-prize button works for all pets and also for category-based filtering by the highest prices.  
 
-5. **Footer with Subscription and Contact**:
-   - The footer includes a subscription input field for users to receive updates and a contact button, enhancing user engagement and communication.
+5. **Footer with menu and subscription**:
+   - The footer provides a useful link menu to contact or browse the website and a subscription input field for users to receive updates.
 
 ## ES6 Features Used
 Here are the top 5 methods of ES6 that are used in my project:
@@ -53,27 +51,27 @@ Here are some screenshots of the Peddy Adoption app:
 
 1. **Homepage**:
    ![Homepage Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/peddyAdoption.png)
-   *The homepage displays a list of pets available for adoption.*
+   *The homepage displays a list of pets available for adoption*
 
-2. **Pet Category**:
+3. **Pet Category**:
    ![Pet Category Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/category.png)
-   *Each pet profile shows detailed information including the pet's name, age, breed, and a brief description.*
+   *Each pet category shows Like, Adopt, and detailed information including the pet's image, name, breed, birth date, and prize.*
 
 2. **Pet Profile/Details**:
    ![Pet Profile Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/petprofile.png)
-   *Each pet profile shows detailed information including the pet's name, age, breed, and a brief description.*
+   *Each pet profile shows detailed information including the pet's name, birth date, breed, vaccination status, and a brief description.*
 
 3. **Adoption Modal**:
    ![Adoption Modal Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/petadopt.png)
    *The modal allows users to express their interest in adopting a pet.*
 
-4. **Filtered View**:
+5. **Filtered View**:
    ![Filtered View Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/filtering.png)
-   *Users can filter pets by categories for easier navigation.*
+   *Users can filter pets by categories and prizes for easier navigation.*
 
-5. **Footer Section**:
+7. **Footer Section**:
    ![Footer Section Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/footer.png)
-   *The footer includes a subscription input field and a contact button for user engagement.*
+   *The footer includes the address, contact information, useful link, and a subscription input field.*
 
 ## Livelink
 https://peddyadoption.netlify.app/
