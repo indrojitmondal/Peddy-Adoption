@@ -1,6 +1,6 @@
 # Peddy Adoption 🐾
 
-Peddy Adoption is a web app that helps users find pets that are available for adoption. It allows users to view pet profiles, filter by category, and initiate the adoption process, all within a clean and responsive interface.
+Peddy Adoption is a web application that helps users find pets that are available for adoption. It allows users to view pet profiles, filter by category, and initiate the adoption process, all within a clean and responsive interface.
 
 ![Peddy Adoption Screenshot](https://github.com/programming-hero-web-course2/b10a6-pet-adoption-indrojitmondal/blob/main/images/peddyAdoption.png)
 
@@ -12,7 +12,7 @@ Peddy Adoption is a web app that helps users find pets that are available for ad
 - [Livelink](#livelink)
 
 ## Description
-Peddy Adoption is designed to streamline the pet adoption process by allowing users to browse through available pets, view detailed information about them, and express their interest in adoption easily through an "Adopt" button and modal.
+Peddy Adoption is designed to streamline the pet adoption process by allowing users to browse available pets, view detailed information about them, and express their interest in adoption easily through an "Adopt" button and modal. When the pet lovers click the like button, a pet will be stored in the adoption box.
 
 ## Features
 Here are the top 5 key features of Peddy Adoption:
@@ -32,7 +32,7 @@ Here are the top 5 key features of Peddy Adoption:
    - The footer includes a subscription input field for users to receive updates and a contact button, enhancing user engagement and communication.
 
 ## ES6 Features Used
-Here are the top 5 methods of ES6 that's are used in my project:
+Here are the top 5 methods of ES6 that are used in my project:
 1. **Let, Const**:
    - I have used let variables locally and globally, and const variables for array and object declaration.
    
@@ -45,8 +45,8 @@ Here are the top 5 methods of ES6 that's are used in my project:
 4. **Template literals**:
    - I have used the template literals to manipulate HTML and CSS documents.
 
-5. **Seperate Operator**:
-   - I have used the seperate operator to copy pet objects.
+5. **Separate Operator**:
+   - I have used the separate operator to copy pet objects.
 
 ## Screenshots
 Here are some screenshots of the Peddy Adoption app:
