@@ -11,7 +11,7 @@ Peddy Adoption is a web application that can be helpful for any pet lovers. With
 - [Livelink](#livelink)
 
 ## Description
-
+This web app is a pet adoption application where users can see available pets and their behavior. The Peddy includes Cat, Dog, Rabbit, and Bird Categories. The Like and Adopt buttons express users' interest. The web app's data is given by API. A loader will show for 2 seconds when users select a pet category. Whatever, It's a pet adoption web app. Hope the app will be attractive to users.
 ## Features
 Here are the top 5 key features of Peddy Adoption:
 1. **Pet Profile and Detailed Information**:
