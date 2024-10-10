@@ -107,7 +107,7 @@ const displayPets = (pets) => {
         const detailsLines= getPetDetailsLines(pet.pet_details);
         newDiv.classList.add('border', 'p-3', 'border-b1','rounded-md');
         newDiv.innerHTML = `
-        <img class="rounded-md object-cover w-full " src="${pet.image}" alt="">
+        <img class="rounded-md object-cover  w-full " src="${pet.image}" alt="">
         <h3 class="font-inter py-2 text-lg font-extrabold">${pet.pet_name?pet.pet_name:'Tom'}</h3>
         <p class="font-lato flex items-center">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"> 

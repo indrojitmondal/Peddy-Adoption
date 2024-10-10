@@ -333,9 +333,9 @@
           <h3 class="font-inter font-bold md:text-lg">Drop a Message</h3>
           <div class="flex md:mt-8 mt-2 flex-col gap-4">
             <input type="text" placeholder="Enter your email"
-              class="font-inter input bg-input rounded-xl w-full " />
+              class="font-inter  input bg-input rounded-xl w-full " />
             <button
-              class="font-lato px-5 py-3 rounded-xl bg-primary md:text-lg text-white md:w-[400px] ">Subscribe</button>
+              class="font-lato px-5 py-3 outline-none rounded-xl bg-primary md:text-lg text-white md:w-[400px] ">Subscribe</button>
           </div>
 
         </div>
@@ -354,6 +354,12 @@
     </footer>
 
     <script src="js/pets.js"></script>
+    <script>
+      const allButton= document.getElementsByTagName('button');
+      for (const button of allButton) {
+        button.classList.add('outline-none');
+      }
+    </script>
 
   </body>
 </html>
