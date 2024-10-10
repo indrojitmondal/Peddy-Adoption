@@ -174,14 +174,14 @@ const displayPets = (pets) => {
             let petId= pet.petId;
             const res= await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
             const data = await res.json();
-            if(!shortingStatus && !categoryStatus){
-            showSpinner(true);
-            setTimeout( ()=>{
+        //     if(!shortingStatus && !categoryStatus){
+        //     showSpinner(true);
+        //     setTimeout( ()=>{
         
-                showSpinner(false);
+        //         showSpinner(false);
         
-            },2000);
-           }
+        //     },2000);
+        //    }
             const detailsModal = document.getElementById('detailsModal');
            // alert(pet.petId);
             
@@ -230,15 +230,17 @@ const displayPets = (pets) => {
 
         </div>
             `;
-           if(!shortingStatus && !categoryStatus){
-            setTimeout( () =>{
-                // displayPets(pets);
-                detailsModal.show();
-            }, 2000);
-          } 
-          else{
-            detailsModal.show();
-          }
+        //    if(!shortingStatus && !categoryStatus){
+        //     setTimeout( () =>{
+        //         // displayPets(pets);
+        //         detailsModal.show();
+        //     }, 2000);
+        //   } 
+        //   else{
+        //     detailsModal.show();
+        //   }
+
+          detailsModal.show();
            
         }
 
