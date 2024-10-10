@@ -57,6 +57,13 @@ const showSpinner = (status)=>{
 }
 // setTimeout(displayPets,2000);
 
+const getDetailsFromAPIByID = async(x)=>{
+ 
+}
+
+let shortingStatus=false;
+let categoryStatus=false;
+
 const displayPets = (pets) => {
     const left = document.getElementById('left');
     const rightContainer = document.getElementById('right-container');
@@ -163,11 +170,21 @@ const displayPets = (pets) => {
 
         const detailsButton = newDiv.querySelector('.details');
         detailsButton.onclick = async() =>{
-            const detailsModal = document.getElementById('detailsModal');
-           // alert(pet.petId);
+            
             let petId= pet.petId;
             const res= await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
             const data = await res.json();
+            if(!shortingStatus && !categoryStatus){
+            showSpinner(true);
+            setTimeout( ()=>{
+        
+                showSpinner(false);
+        
+            },2000);
+           }
+            const detailsModal = document.getElementById('detailsModal');
+           // alert(pet.petId);
+            
             console.log('Details Data');
             console.log(data.petData);
             let p=data.petData;
@@ -213,7 +230,16 @@ const displayPets = (pets) => {
 
         </div>
             `;
+           if(!shortingStatus && !categoryStatus){
+            setTimeout( () =>{
+                // displayPets(pets);
+                detailsModal.show();
+            }, 2000);
+          } 
+          else{
             detailsModal.show();
+          }
+           
         }
 
 
@@ -288,7 +314,7 @@ const resetAllCategories = (categories) => {
         x.classList.remove('bg-btn', 'rounded-[120px]');
     });
 }
-let categoryStatus=false;
+
 let categoryName='';
 // loadPetsByCategoryName 
 const loadPetsByCategoryName = async (categoryName)=>{
@@ -393,9 +419,10 @@ const compare=(a,b)=>{
     if(!b.price) b.price=1200;
     return (b.price)-(a.price);
 }
-
+ 
 const shortByPrice= document.getElementById('shortByPrice');
 shortByPrice.addEventListener('click', ()=>{
+    shortingStatus=true;
     // alert('shortButtonClicked');
     console.log('Copy Data Received by myData');
     console.log(myData);
